@@ -5,36 +5,27 @@
 	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-	<div id="app">
-		<div >
-				<div id="siteList">
-					<template v-for="(site, i) in sites">
-		            	<div class="site">
-		            		{{i}}) <a :href="site.url">{{ site.title }}</a>
-		            	</div>
-		            </template>
-				</div>	
-			<div v-if="layout === false" id="paragraph">
-					<div id="informationBottom">
-						<p> 
-							This webring seeks to inspire recursers to build an online home and share traffic among each other. The webring welcomes personal websites, blogs, and portfolios.
-						</p>
-						<p>
-							To add yourself, head to the repo and make a pull request. <img src="rc-webring.png" width="30px" style="float: right;">
-						</p>
-					</div>
-			</div>
-		</div>
-		<div v-if="layout === true" id="paragraph">
-			<div id="information">
-				<div class="head">
-					<img src="rc-webring.png" width="30px">
+	<div id="app" :class="orientation">
+		<div id="siteList">
+			<template v-for="(site, i) in sites">
+            	<div class="site">
+            		{{i}}) <a :href="site.url">{{ site.title }}</a>
+            	</div>
+            </template>
+		</div>	
+		<div id="paragraph">
+			<div>
+				<div id="logoContainer">
+					<img src="assets/rc-webring.png" width="30px">
 				</div>
 				<p> 
 					This webring seeks to inspire recursers to build an online home and share traffic among each other. The webring welcomes personal websites, blogs, and portfolios.
 				</p>
 				<p>
-					To add yourself, head to the repo and make a pull request.
+					To add yourself, head to the repo and make a <a href="https://github.com/jskjott/webring/edit/master/sites.js">pull request</a>. 
+				</p>
+				<p>
+					<span v-on:click="random"> visit random</span>  | <a href="https://github.com/jskjott/webring">about</a> | <a href="https://github.com/jskjott/webring/issues">broken link</a> 
 				</p>
 			</div>
 		</div>

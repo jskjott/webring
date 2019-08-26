@@ -1,4 +1,14 @@
+@font-face {
+	font-family: 'vt323regular';
+	src: url('assets/vt323-regular-webfont.woff2') format('woff2'),
+		url('assets/vt323-regular-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
 html {
+	font-family: 'vt323regular';
+	font-size: 16px;
 	margin: 0;
 	width: 100%;
 	height: 100%;
@@ -19,8 +29,16 @@ body {
 #app {
 	height: auto;
 	min-height: calc(100vh - 80px);
+}
+
+.horisontal {
 	display: grid;
-	grid-template-columns: 1fr auto;
+	grid-template-columns: 1fr 375px;
+}
+
+.vertical {
+	display: grid;
+	grid-template-rows: 1fr 375px;
 }
 
 #siteList {
@@ -41,8 +59,8 @@ body {
 	padding-top: 1rem;
 }
 
-#informationBottom {
-	border-top: 2px solid white;
+#logoContainer {	
+	border-bottom: 2px solid white;
 }
 
 .head {
@@ -62,5 +80,12 @@ img {
 
 a {
 	color: white;
-    text-shadow: 0 0 1px white, 0 0 3px white;
+    text-shadow: 0 0 1px white, 0 0 2px white;
+}
+
+span {
+	text-decoration: underline;
+	color: white;
+    text-shadow: 0 0 1px white, 0 0 2px white;	
+	cursor: pointer;
 }

@@ -1,1 +1,1 @@
-webring
+A webring which seeks to inspire recursers to build an online home and share traffic among each other. The webring welcomes personal websites, blogs, and portfolios.
