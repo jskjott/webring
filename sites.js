@@ -11,6 +11,8 @@ const sites = [
 	{ url: 'https://mclare.blog', title: 'mclare', author: 'Maryanne Wachter'},	
 	{ url: 'https://vaibhavsagar.com', title: 'vaibhavsagar', author: 'Vaibhav Sagar' },
 	{ url: 'https://jon.network', title: 'Jon\' Network', author: 'JonPizza' },
+  { url: 'https://chatha-sphere.github.io/', title: 'pchatha', author: 'Prayag (Nikku) Chatha' }
+
 ]
 
 export default sites
