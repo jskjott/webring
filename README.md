@@ -20,10 +20,15 @@ A webring is a collection of websites traditionally linked together by a circula
 
 ## Who can join the webring?
 
-The webring is open to current participants and alumns of the <a href="recurse.com">Recurse Center</a> The webring welcomes sites such as personal websites, blogs, wikis, or portfolios.
+The webring is open to current participants and alumns of the <a href="recurse.com">Recurse Center</a> The webring welcomes sites such as personal websites, blogs, wikis, or portfolios. The aforementioned are just examples: if your online home is something else please do still add yourself to the ring.
 
+We discourage the additon of business sites or social media profiles.
 
 ## Contributions
 
 This is an ongoing community project: if you want to contribute feel free to submit pull requests or contact Jonathan on Zulip.
 
+## Ideas for new features
+
+- Provide several ways of traversing the webring. Currently all you can do is head to the central site. Once at the central site you can click on one of the links or you can click the "random" button to visit a random page.
+- ...
