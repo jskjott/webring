@@ -31,4 +31,5 @@ This is an ongoing community project: if you want to contribute feel free to sub
 ## Ideas for new features
 
 - Provide several ways of traversing the webring. Currently all you can do is head to the central site. Once at the central site you can click on one of the links or you can click the "random" button to visit a random page.
-- ...
+- Alternative ways of visualisaing the webring.
+- Find themes shared by ring sites by doing textual analysis / topic modelling. Then allow sorting of sites based on these on the central site.
