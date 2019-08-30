@@ -44,7 +44,6 @@ body {
 #siteList {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-	grid-template-rows: 40px;
 }
 
 #paragraph {
@@ -77,6 +76,7 @@ img {
 	display: grid;
 	grid-template-rows: 20px 20px;
 	grid-template-columns: 30px 1fr;
+	font-size: 20px;
 }
 
 a {
@@ -87,6 +87,6 @@ a {
 span {
 	text-decoration: underline;
 	color: white;
-    text-shadow: 0 0 1px white, 0 0 2px white;	
+    text-shadow: 0 0 1px white, 0 0 2px white;
 	cursor: pointer;
 }

@@ -8,8 +8,11 @@ const sites = [
 	{ url: 'https://www.fekadu.com', title: 'mfekadu', author: 'Michael Fekadu' },
 	{ url: 'http://www.charstiles.com', title: 'charstiles', author: 'Char Stiles' },
 	{ url: 'https://blog.wesleyac.com', title: 'wesleyac', author: 'Wesley Aptekar-Cassels' },
-	{ url: 'https://chatha-sphere.github.io/', title: 'pchatha', author: 'Prayag (Nikku) Chatha' }
-	
+	{ url: 'https://mclare.blog', title: 'mclare', author: 'Maryanne Wachter'},	
+	{ url: 'https://vaibhavsagar.com', title: 'vaibhavsagar', author: 'Vaibhav Sagar' },
+	{ url: 'https://jon.network', title: 'Jon\' Network', author: 'JonPizza' },
+  { url: 'https://chatha-sphere.github.io/', title: 'pchatha', author: 'Prayag (Nikku) Chatha' }
+
 ]
 
 export default sites
