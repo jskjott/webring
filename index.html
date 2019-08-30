@@ -8,12 +8,17 @@
 </head>
 <body>
 	<div id="app" :class="orientation">
-		<div id="siteList">
-			<template v-for="(site, i) in sites">
-            	<div class="site">
-            		{{i}}) <a :href="site.url">{{ site.title }}</a>
-            	</div>
-            </template>
+		<div >
+			<div id="siteList">
+				<template v-for="(site, i) in sites">
+	            	<div class="site">
+	            		{{i}}) <a :href="site.url">{{ site.title }}</a>
+	            	</div>
+	            </template>	
+			</div>
+			<div>
+				
+			</div>
 		</div>	
 		<div id="paragraph">
 			<div>
