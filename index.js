@@ -21,6 +21,7 @@ const siteList = new Vue({
       /* explore is the first time the user wants to explore the webring */
       let choice = confirm("do you want to go in a ring?")
       if (choice == true) {
+        alert("Cool!\nThe game is to **find the RC logo on each site**.\nGood luck!")
         const theSite = this.sitesToExplore[0]
         const visited = JSON.stringify([theSite])
         window.localStorage.setItem('lastVisted', Date.now())
