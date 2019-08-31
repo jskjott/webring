@@ -6,6 +6,12 @@ const siteList = new Vue({
     sites,
     orientation: window.innerWidth > 1060 ? 'horisontal' : 'vertical'
   },
+  computed: {
+    // only explore sites with the Webring link
+    sitesToExplore: function () {
+      return this.sites.filter( (s) => s.hasRingLink )
+    }
+  },
   methods: {
     random: function(){
       const url = sites[Math.floor(Math.random() * sites.length)].url
@@ -15,8 +21,7 @@ const siteList = new Vue({
       /* explore is the first time the user wants to explore the webring */
       let choice = confirm("do you want to go in a ring?")
       if (choice == true) {
-        // because localStorage doesn't know how to store objects
-        const theSite = sites[0]
+        const theSite = this.sitesToExplore[0]
         const visited = JSON.stringify([theSite])
         window.localStorage.setItem('lastVisted', Date.now())
         window.localStorage.setItem('visited', visited)
@@ -24,30 +29,32 @@ const siteList = new Vue({
       } else {
         console.log("ok.")
       }
+    },
+    keepExploring: function() {
+      const visited = JSON.parse(window.localStorage.getItem('visited'))
+      if (visited) { // then we have an array with at least 1 element
+        if (visited.length >= this.sitesToExplore.length) {
+          alert("Congratulations! You completed the ring!")
+          window.localStorage.clear()
+        } else {
+          const yes = confirm("let's keep going?")
+          if (yes) {
+            const newSite = this.sitesToExplore[visited.length]
+            const newVisited = JSON.stringify([...visited, newSite])
+            window.localStorage.setItem('visited', newVisited)
+            window.localStorage.setItem('lastVisted', Date.now())
+            window.location.href = newSite.url
+          } else {
+            window.localStorage.clear()
+          }
+        }
+      } else {
+        // then it's the first time
+      }
     }
   },
   mounted() {
-    const visited = JSON.parse(window.localStorage.getItem('visited'))
-    if (visited) { // then we have an array with at least 1 element
-      if (visited.length >= sites.length) {
-        alert("Congratulations! You completed the ring!")
-        window.localStorage.clear()
-      } else {
-        const yes = confirm("let's keep going?")
-        if (yes) {
-          const newSite = sites[visited.length]
-          const newVisited = JSON.stringify([...visited, newSite])
-          window.localStorage.setItem('visited', newVisited)
-          window.localStorage.setItem('lastVisted', Date.now())
-          window.location.href = newSite.url
-        } else {
-          window.localStorage.clear();
-        }
-      }
-    } else {
-      // then it's the first time
-    }
-
+    this.keepExploring()
     this.$nextTick(() => {
       	window.addEventListener('resize', () => {
       		if (window.innerWidth > 1060) {
