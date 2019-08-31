@@ -3,8 +3,11 @@ import sites from "./sites.js"
 const siteList = new Vue({
   el: '#app',
   data: {
+    redirect: false,
+    visited: null,
     sites,
-    orientation: window.innerWidth > 1060 ? 'horisontal' : 'vertical'
+    orientation: window.innerWidth > 1060 ? 'horisontal' : 'vertical',
+    timeout: null,
   },
   methods: {
     random: function(){
@@ -13,36 +16,62 @@ const siteList = new Vue({
     },
     explore: function(){
       /* explore is the first time the user wants to explore the webring */
-      let choice = confirm("do you want to go in a ring?")
-      if (choice == true) {
         // because localStorage doesn't know how to store objects
+        this.redirect = true
+
         const theSite = sites[0]
         const visited = JSON.stringify([theSite])
+
         window.localStorage.setItem('lastVisted', Date.now())
         window.localStorage.setItem('visited', visited)
-        window.location.href = theSite.url
+
+        this.timeout = setTimeout(this.sendToSite, 4000)
+    },
+    sendToSite: function(){
+      if (this.redirect) {
+          let newSite
+          let newVisited
+
+          if (this.visited) {
+            newSite = sites[this.visited.length]
+            newVisited = JSON.stringify([...this.visited, newSite])
+          } else {
+            newSite = sites[0]
+            newVisited = JSON.stringify([newSite])            
+          }
+
+          window.localStorage.setItem('visited', newVisited)
+          window.localStorage.setItem('lastVisted', Date.now())
+
+          window.location.href = newSite.url
       } else {
-        console.log("ok.")
+        window.localStorage.clear();
       }
+    },
+    cancel: function(){
+      this.redirect = false
+      this.visited = null
+      clearTimeout(this.timeout)
+
+      window.localStorage.clear()
+    },
+    clear: function(){
+      this.redirect = false
+      this.visited = null
+
+      window.localStorage.clear()
     }
   },
   mounted() {
-    const visited = JSON.parse(window.localStorage.getItem('visited'))
-    if (visited) { // then we have an array with at least 1 element
-      if (visited.length >= sites.length) {
-        alert("Congratulations! You completed the ring!")
-        window.localStorage.clear()
+    this.visited = JSON.parse(window.localStorage.getItem('visited'))
+
+    if (this.visited) { // then we have an array with at least 1 element
+      if (this.visited.length >= sites.length) {
+        this.redirect = true
+        this.timeout = setTimeout(this.clear, 3000)
       } else {
-        const yes = confirm("let's keep going?")
-        if (yes) {
-          const newSite = sites[visited.length]
-          const newVisited = JSON.stringify([...visited, newSite])
-          window.localStorage.setItem('visited', newVisited)
-          window.localStorage.setItem('lastVisted', Date.now())
-          window.location.href = newSite.url
-        } else {
-          window.localStorage.clear();
-        }
+        this.redirect = true
+        this.timeout = setTimeout(this.sendToSite, 2500)
       }
     } else {
       // then it's the first time

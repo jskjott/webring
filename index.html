@@ -8,18 +8,79 @@
     </head>
     <body>
         <div :class="orientation" id="app">
-            <div>
-                <div id="siteList">
-                    <template v-for="(site, i) in sites">
-                        <div class="site">
-                            {{i}})
-                            <a :href="site.url">{{ site.title }}</a>
-                        </div>
-                    </template>
-                </div>
-                <div></div>
-            </div>
-            <div id="paragraph">
+        	<div >
+        		<div v-if="redirect">
+	        		<div v-if="visited && visited.length > 0" style="width: 50vw;">
+		        		<div class="redirectMenu">
+		        			<div v-if="visited.length < sites.length && visited.length > 0">
+		        				<div>
+			        				<div class="menuContent">
+				        				<p>
+					        			You are about to be sent to the next site in the ring...
+					        			</p>
+					        		</div>
+					        		<svg width="50vw" height="5" viewBox="0 0 50vw 5" fill="white" version="1.1"
+									     xmlns="http://www.w3.org/2000/svg">
+									  
+									  <rect x="0" y="0" width="50vw" height="20">
+									    <animate attributeType="XML" attributeName="x" from="-50vw" to="0"
+									        dur="2.5s" repeatCount="1"/>
+									  </rect>
+									</svg>
+								  </div>
+		        			</div>
+		        			<div v-else>
+		        				<div class="menuContent">
+			        				<p>
+				        			Awesome! You completed the ring!
+				        			</p>
+			        			</div>
+		        			</div>
+		        		</div>
+		        		<div v-if="visited.length < sites.length">
+		        			<button v-on:click="cancel">cancel</button>
+		        			<button v-on:click="sendToSite" style="float: right;">go</button>
+		        		</div>
+		        	</div>
+		        	<div v-else style="width: 50vw;">
+		        		<div class="redirectMenu">
+		        			<div class="menuContent">
+		        				<p>
+			        				You will be redirected to a random webring member site. 
+			        			</p>
+			        			<p>
+			        				On a member site, click the webring icon to go to the next site in the ring.
+			        			</p>
+		        			</div>
+
+		        			<svg width="50vw" height="5" viewBox="0 0 50vw 5" fill="white" version="1.1"
+							     xmlns="http://www.w3.org/2000/svg">
+							  
+							  <rect x="0" y="0" width="50vw" height="20">
+							    <animate attributeType="XML" attributeName="x" from="-50vw" to="0"
+							        dur="4s" repeatCount="1"/>
+							  </rect>
+							</svg>
+		        		</div>
+		        		<button v-on:click="cancel">cancel</button>
+		        		<button v-on:click="sendToSite" style="float: right;">go</button>
+		        	</div>
+	        	</div>
+	        	<div v-else>
+	        		<div>
+		                <div id="siteList">
+		                    <template v-for="(site, i) in sites">
+		                        <div class="site">
+		                            {{i}})
+		                            <a :href="site.url">{{ site.title }}</a>
+		                        </div>
+		                    </template>
+		                </div>
+		                <div></div>
+		            </div>
+        		</div>
+        	</div>
+            <div v-if="!redirect" id="paragraph">
                 <div>
                     <div id="logoContainer">
                         <img src="icon.png" width="50px">
@@ -29,22 +90,22 @@
                     </p>
                     <p>
                         To add yourself, read through the
-                        <a href="https://github.com/jskjott/webring">about</a>
+                        <span><a href="https://github.com/jskjott/webring">about</a></span>
                         page and make a
-                        <a href="https://github.com/jskjott/webring/edit/master/sites.js">pull request</a>.
+                        <span><a href="https://github.com/jskjott/webring/edit/master/sites.js">pull request</a></span>.
                     </p>
                     <p>
                         <span v-on:click="random">
                             visit random</span>
                         |
-                        <a href="https://github.com/jskjott/webring">about</a>
+                        <span><a href="https://github.com/jskjott/webring">information</a></span>
                         |
-						<a href="https://github.com/jskjott/webring/issues">broken link</a>
+						<span><a href="https://github.com/jskjott/webring/issues">broken link</a></span>
 						|
 						<span v-on:click="explore">explore</span>
                     </p>
                 </div>
-            </div>
+            </div>	
         </div>
     </body>
 </html>

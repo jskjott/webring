@@ -41,6 +41,16 @@ body {
 	grid-template-rows: 1fr 375px;
 }
 
+.redirectMenu {
+	background-color: #445156;
+	width: 50vw;
+}
+
+.menuContent {
+	padding: 1rem 2rem 1rem 2rem;
+	font-size: 20px;
+}
+
 #siteList {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -81,12 +91,28 @@ img {
 
 a {
 	color: white;
-    text-shadow: 0 0 1px white, 0 0 2px white;
+    text-shadow: 0 0 0.5px white, 0 0 1px white;
+    text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
 }
 
 span {
 	text-decoration: underline;
 	color: white;
-    text-shadow: 0 0 1px white, 0 0 2px white;
+    text-shadow: 0 0 0.5px white, 0 0 1px white;
 	cursor: pointer;
+}
+
+button {
+	background-color: #354145;
+	border-color: white;
+	color: white;
+	border-radius: 2px;
+	padding: 0.4rem 0.6rem 0.6rem 0.6rem;
+	font-family: 'vt323regular';
+	font-size: 20px;
+	margin: 2rem 2rem 0 2rem;
 }
