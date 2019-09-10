@@ -6,7 +6,6 @@ const siteList = new Vue({
     redirect: false,
     visited: null,
     sites,
-    orientation: window.innerWidth > 1060 ? 'horisontal' : 'vertical',
     timeout: null,
   },
   methods: {
@@ -22,6 +21,9 @@ const siteList = new Vue({
 
         window.localStorage.setItem('lastVisited', Date.now())
         window.localStorage.setItem('visited', visited)
+
+        document.getElementById("ring").remove()
+        this.drawRing()
 
         this.timeout = setTimeout(this.sendToSite, 4000)
     },
@@ -92,7 +94,6 @@ const siteList = new Vue({
       r-=add
       
       const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg")
-      console.log()
       
       svg.setAttribute('id','ring')
       svg.setAttribute('width', svgWidth)
@@ -106,16 +107,21 @@ const siteList = new Vue({
         circle.setAttributeNS(null, 'cy', point[1])
         circle.setAttributeNS(null, 'r', 5)
 
-        if (this.visited && this.visited[i] || 
+        console.log(i, this.visited, this)
+        if (this.visited && i === this.visited.length || 
+          i === 0 && this.redirect && this.visited === null ) {
+          circle.setAttributeNS(null, 'r', 7)
+          circle.setAttributeNS(null, 'style', 'fill: #354145; stroke: white; stroke-width: 3px;' )
+        } else if (this.visited && this.visited[i] || 
           this.visited && this.visited.length === 1 && i === 0) {
           circle.setAttributeNS(null, 'style', 'fill: white; stroke: white; stroke-width: 1px;' )
         } else {
-          circle.setAttributeNS(null, 'style', 'fill: none; stroke: white; stroke-width: 1px;' )
+          circle.setAttributeNS(null, 'style', 'fill: #5a5a5a; stroke: white; stroke-width: 1px;' )
         }
 
         svg.appendChild(circle)
 
-        const nextIndex = (i+1) % (this.sites.length-1)
+        const nextIndex = (i+1) % (this.sites.length)
 
         if (this.visited && this.visited[nextIndex] && this.visited[i] || 
           this.visited && this.visited[i] && !this.visited[nextIndex]) {
@@ -126,11 +132,10 @@ const siteList = new Vue({
           newLine.setAttribute('y2',points[nextIndex][1])
           newLine.setAttribute("stroke", "white")
           newLine.setAttribute("stroke-width", "2")
-          console.log(i, this.visited.length, this.sites.length)
-          if (!this.visited[nextIndex] || i === this.sites.length - 2) {
+          if (!this.visited[nextIndex] && this.visited.length !== this.sites.length || 
+            i === this.sites.length - 2 && this.visited.length !== this.sites.length ) {
             newLine.setAttribute("stroke-dasharray", "4")
           }
-          console.log(newLine)
           svg.appendChild(newLine)
         }
         
@@ -162,11 +167,6 @@ const siteList = new Vue({
       	window.addEventListener('resize', () => {
           document.getElementById("ring").remove()
           this.drawRing()
-      		if (window.innerWidth > 1060) {
-      			this.orientation = 'horisontal'
-      		} else {
-      			this.orientation = 'vertical'
-      		}
     	})
     })
   }

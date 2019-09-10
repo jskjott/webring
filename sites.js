@@ -10,7 +10,7 @@ const sites = [
 	{ url: 'https://blog.wesleyac.com', title: 'wesleyac', author: 'Wesley Aptekar-Cassels' },
 	{ url: 'https://mclare.blog', title: 'mclare', author: 'Maryanne Wachter'},	
 	{ url: 'https://vaibhavsagar.com', title: 'vaibhavsagar', author: 'Vaibhav Sagar' },
-	{ url: 'https://jon.network', title: 'Jon\' Network', author: 'JonPizza' },
+	{ url: 'https://jon.network', title: 'Jon\'s Network', author: 'JonPizza' },
 	{ url: 'https://chirag.io', title: 'Chirag Davé', author: 'Chirag Davé' },
 	{ url: 'https://sequential.me', title: 'Winston Smith', author: 'Winston Smith' },
   	{ url: 'https://chatha-sphere.github.io/about', title: 'pchatha', author: 'Prayag (Nikku) Chatha' },

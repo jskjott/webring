@@ -7,7 +7,7 @@
         <link href="favicon-96x96.png" rel="shortcut icon" type="image/png"/>
     </head>
     <body>
-        <div :class="orientation" id="app">
+        <div id="app">
         	<div>
         		<div v-if="redirect">
 	        		<div v-if="visited && visited.length > 0">
@@ -68,7 +68,6 @@
                 <div>
                     <div id="logoContainer">
                         <img src="icon.png" width="50px">
-                        <!-- <span v-on:click="explore">explore</span> -->
                     </div>
                     <p>
                         This webring seeks to inspire recursers to build an online home and share traffic among each other. The webring welcomes personal sites such as blogs, portfolios, or wikis.
@@ -83,8 +82,8 @@
                     <div id="menuContainer">
 	                    <span v-on:click="explore"><h1>explore</h1></span>
 	                    <div id="menu">
-	                    	<span style="height: 20px" v-on:click="random">visit random</span>
-                        	<span style="height: 20px"><a href="https://github.com/jskjott/webring">information</a></span>
+	                    	<span v-on:click="random">visit random</span>
+                        	<span><a href="https://github.com/jskjott/webring">information</a></span>
 							<span><a href="https://github.com/jskjott/webring/issues">broken link</a></span>
 							<span><a href="https://www.recurse.com">what's Recurse?</a></span>
 	                    </div>	
