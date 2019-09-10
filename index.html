@@ -8,9 +8,9 @@
     </head>
     <body>
         <div :class="orientation" id="app">
-        	<div >
+        	<div>
         		<div v-if="redirect">
-	        		<div v-if="visited && visited.length > 0" style="width: 50vw;">
+	        		<div v-if="visited && visited.length > 0">
 		        		<div class="redirectMenu">
 		        			<div v-if="visited.length < sites.length && visited.length > 0">
 		        				<div>
@@ -19,16 +19,8 @@
 					        			You are about to be redirected to: {{ sites[visited.length].title }}
 					        			</p>
 					        		</div>
-					        		<svg width="50vw" height="5" viewBox="0 0 50vw 5" fill="white" version="1.1"
-									     xmlns="http://www.w3.org/2000/svg">
-									  
-									  <rect x="0" y="0" width="50vw" height="20">
-									    <animate attributeType="XML" attributeName="x" from="-50vw" to="0"
-									        dur="2.5s" repeatCount="1"/>
-									  </rect>
-									</svg>
 								  </div>
-		        			</div>
+		        				</div>
 		        			<div v-else>
 		        				<div class="menuContent">
 			        				<p>
@@ -42,7 +34,7 @@
 		        			<button v-on:click="sendToSite" style="float: right;">go</button>
 		        		</div>
 		        	</div>
-		        	<div v-else style="width: 50vw;">
+		        	<div v-else >
 		        		<div class="redirectMenu">
 		        			<div class="menuContent">
 		        				<p>
@@ -53,14 +45,6 @@
 			        			</p>
 		        			</div>
 
-		        			<svg width="50vw" height="5" viewBox="0 0 50vw 5" fill="white" version="1.1"
-							     xmlns="http://www.w3.org/2000/svg">
-							  
-							  <rect x="0" y="0" width="50vw" height="20">
-							    <animate attributeType="XML" attributeName="x" from="-50vw" to="0"
-							        dur="4s" repeatCount="1"/>
-							  </rect>
-							</svg>
 		        		</div>
 		        		<button v-on:click="cancel">cancel</button>
 		        		<button v-on:click="sendToSite" style="float: right;">go</button>
@@ -84,6 +68,7 @@
                 <div>
                     <div id="logoContainer">
                         <img src="icon.png" width="50px">
+                        <!-- <span v-on:click="explore">explore</span> -->
                     </div>
                     <p>
                         This webring seeks to inspire recursers to build an online home and share traffic among each other. The webring welcomes personal sites such as blogs, portfolios, or wikis.
@@ -94,16 +79,17 @@
                         page and make a
                         <span><a href="https://github.com/jskjott/webring/edit/master/sites.js">pull request</a></span>.
                     </p>
-                    <p>
-                        <span v-on:click="random">
-                            visit random</span>
-                        |
-                        <span><a href="https://github.com/jskjott/webring">information</a></span>
-                        |
-						<span><a href="https://github.com/jskjott/webring/issues">broken link</a></span>
-						|
-						<span v-on:click="explore">explore</span>
-                    </p>
+
+                    <div id="menuContainer">
+	                    <span v-on:click="explore"><h1>explore</h1></span>
+	                    <div id="menu">
+	                    	<span style="height: 20px" v-on:click="random">visit random</span>
+                        	<span style="height: 20px"><a href="https://github.com/jskjott/webring">information</a></span>
+							<span><a href="https://github.com/jskjott/webring/issues">broken link</a></span>
+							<span><a href="https://www.recurse.com">what's Recurse?</a></span>
+	                    </div>	
+                    </div>
+                    
                 </div>
             </div>	
         </div>
