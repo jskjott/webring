@@ -1,6 +1,7 @@
 'use strict'
 
 // protocol://url.domain.ext
+// Remember to add the RC logo to your site, as described in the README.md
 
 const sites = [
 	{ url: 'https://www.jskjott.com', title: 'jskjott', author: 'Jonathan Skjøtt' },
