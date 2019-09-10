@@ -1,0 +1,26 @@
+{
+  "name": "webring",
+  "version": "1.0.0",
+  "description": "A <a href=\"https://webring.recurse.com\">webring</a> made to **inspire recursers to build an online home** and share traffic among each other.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "node_modules/.bin/eslint index.js --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jskjott/webring.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jskjott/webring/issues"
+  },
+  "homepage": "https://github.com/jskjott/webring#readme",
+  "devDependencies": {
+    "eslint": "^6.3.0",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-vue": "^5.2.3",
+    "prettier": "^1.18.2"
+  }
+}
