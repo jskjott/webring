@@ -18,6 +18,7 @@ const sites = [
 	{ url: 'https://lukeburns.com', title: 'lukeburns', author: 'Luke Burns' },
         { url: 'https://docs.sweeting.me/s/blog', title: 'thesquash', author: 'Nick Sweeting' },
 	{ url: 'https://bits.ashleyblewer.com', title: 'ablwr', author: 'Ashley Blewer' },
+	{ url: 'https://www.harihareswara.net/', title: 'brainwane', author: 'Sumana Harihareswara' },
 ]
 
 export default sites
