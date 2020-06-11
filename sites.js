@@ -4,7 +4,7 @@
 // Remember to add the RC logo to your site, as described in the README.md
 
 const sites = [
-	{ url: 'https://www.jskjott.com', title: 'jskjott', author: 'Jonathan Skjøtt' },
+	{ url: 'https://resevoir.net', title: 'resevoir', author: 'Jonathan Skjøtt' },
 	{ url: 'https://tomlisankie.com', title: 'Thomas Lisankie', author: 'Thomas Lisankie'},
 	{ url: 'https://www.fekadu.com', title: 'mfekadu', author: 'Michael Fekadu' },
 	{ url: 'http://www.charstiles.com', title: 'charstiles', author: 'Char Stiles' },
