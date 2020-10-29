@@ -21,6 +21,8 @@ const sites = [
 	{ url: 'https://www.harihareswara.net/', title: 'brainwane', author: 'Sumana Harihareswara' },
 	{ url: 'https://annaanna.net/', title: 'Anna annA', author: 'Anna Leuchtenberger' },
 	{ url: 'https://solquemal.com', title: 'solquemal', author: 'Sol Sarratea' },
+	{ url: 'https://solquemal.com', title: 'solquemal', author: 'Sol Sarratea' },
+	{ url: 'https://fundor333.com', title: 'Fundor333', author: 'Matteo Scarpa' }
 ]
 
 export default sites
