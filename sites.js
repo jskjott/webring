@@ -8,7 +8,7 @@ const sites = [
 	{ url: 'https://tomlisankie.com', title: 'Thomas Lisankie', author: 'Thomas Lisankie'},
 	{ url: 'https://www.fekadu.com', title: 'mfekadu', author: 'Michael Fekadu' },
 	{ url: 'http://www.charstiles.com', title: 'charstiles', author: 'Char Stiles' },
-	{ url: 'https://blog.wesleyac.com', title: 'wesleyac', author: 'Wesley Aptekar-Cassels' },
+	{ url: 'https://blog.wesleyac.com', title: 'wesleyac (blog)', author: 'Wesley Aptekar-Cassels' },
 	{ url: 'https://mclare.blog', title: 'mclare', author: 'Maryanne Wachter'},	
 	{ url: 'https://vaibhavsagar.com', title: 'vaibhavsagar', author: 'Vaibhav Sagar' },
 	{ url: 'https://jon.network', title: 'Jon\'s Network', author: 'JonPizza' },
@@ -22,7 +22,8 @@ const sites = [
 	{ url: 'https://annaanna.net/', title: 'Anna annA', author: 'Anna Leuchtenberger' },
 	{ url: 'https://solquemal.com', title: 'solquemal', author: 'Sol Sarratea' },
 	{ url: 'https://solquemal.com', title: 'solquemal', author: 'Sol Sarratea' },
-	{ url: 'https://fundor333.com', title: 'Fundor333', author: 'Matteo Scarpa' }
+	{ url: 'https://fundor333.com', title: 'Fundor333', author: 'Matteo Scarpa' },
+	{ url: 'https://notebook.wesleyac.com', title: 'wesleyac (notebook)', author: 'Wesley Aptekar-Cassels' }
 ]
 
 export default sites
