@@ -23,7 +23,8 @@ const sites = [
 	{ url: 'https://solquemal.com', title: 'solquemal', author: 'Sol Sarratea' },
 	{ url: 'https://solquemal.com', title: 'solquemal', author: 'Sol Sarratea' },
 	{ url: 'https://fundor333.com', title: 'Fundor333', author: 'Matteo Scarpa' },
-	{ url: 'https://notebook.wesleyac.com', title: 'wesleyac (notebook)', author: 'Wesley Aptekar-Cassels' }
+	{ url: 'https://notebook.wesleyac.com', title: 'wesleyac (notebook)', author: 'Wesley Aptekar-Cassels' },
+	{ url: 'https://notes.neeasade.net', title: 'Nathan\'s notes', author: 'Nathan Isom' }
 ]
 
 export default sites
