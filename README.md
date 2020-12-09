@@ -22,7 +22,7 @@ A webring is a collection of websites traditionally linked together by a circula
 
 ## Who can join the webring?
 
-The webring is open to current participants and alumns of the <a href="recurse.com">Recurse Center</a> The webring welcomes sites such as personal websites, blogs, wikis, or portfolios. The aforementioned are just examples: if your online home is something else please do still add yourself to the ring.
+The webring is open to current participants and alumns of the <a href="https://www.recurse.com/">Recurse Center</a> The webring welcomes sites such as personal websites, blogs, wikis, or portfolios. The aforementioned are just examples: if your online home is something else please do still add yourself to the ring.
 
 We discourage the additon of business sites or social media profiles.
 
