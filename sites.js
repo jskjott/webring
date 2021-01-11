@@ -25,7 +25,8 @@ const sites = [
 	{ url: 'https://fundor333.com', title: 'Fundor333', author: 'Matteo Scarpa' },
 	{ url: 'https://notebook.wesleyac.com', title: 'wesleyac (notebook)', author: 'Wesley Aptekar-Cassels' },
 	{ url: 'https://notes.neeasade.net', title: 'Nathan\'s notes', author: 'Nathan Isom' },
-	{ url: 'https://aless.co', title: 'anti-pattern', author: 'Alessia Bellisario' }
+	{ url: 'https://aless.co', title: 'anti-pattern', author: 'Alessia Bellisario' },
+	{ url: 'https://george.mand.is', title: 'georgemandis', author: 'George Mandis' }
 ]
 
 export default sites
