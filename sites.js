@@ -26,7 +26,8 @@ const sites = [
 	{ url: 'https://notebook.wesleyac.com', title: 'wesleyac (notebook)', author: 'Wesley Aptekar-Cassels' },
 	{ url: 'https://notes.neeasade.net', title: 'Nathan\'s notes', author: 'Nathan Isom' },
 	{ url: 'https://aless.co', title: 'anti-pattern', author: 'Alessia Bellisario' },
-	{ url: 'https://george.mand.is', title: 'georgemandis', author: 'George Mandis' }
+	{ url: 'https://george.mand.is', title: 'georgemandis', author: 'George Mandis' },
+	{ url: 'https://clarity.flowers', title: 'Clarity Flowers', author: 'Clarity Flowers' }
 ]
 
 export default sites
