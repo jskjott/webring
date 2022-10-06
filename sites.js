@@ -23,7 +23,8 @@ const sites = [
 	{ url: 'https://notes.neeasade.net', title: 'Nathan\'s notes', author: 'Nathan Isom' },
 	{ url: 'https://aless.co', title: 'anti-pattern', author: 'Alessia Bellisario' },
 	{ url: 'https://george.mand.is', title: 'georgemandis', author: 'George Mandis' },
-	{ url: 'https://clarity.flowers', title: 'Clarity Flowers', author: 'Clarity Flowers' }
+	{ url: 'https://clarity.flowers', title: 'Clarity Flowers', author: 'Clarity Flowers' },
+	{ url: 'https://jim707t.netlify.app', title: 'Jim707t-Jim', author: 'Jim707t Jim' }
 ]
 
 export default sites
