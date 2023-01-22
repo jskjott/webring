@@ -24,6 +24,7 @@ const sites = [
 	{ url: 'https://aless.co', title: 'anti-pattern', author: 'Alessia Bellisario' },
 	{ url: 'https://george.mand.is', title: 'georgemandis', author: 'George Mandis' },
 	{ url: 'https://clarity.flowers', title: 'Clarity Flowers', author: 'Clarity Flowers' }
+	{ url: 'https://www.stevegattuso.me', title: 'stevegattuso.me', author: 'Steve Gattuso' }
 ]
 
 export default sites
