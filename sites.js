@@ -25,7 +25,8 @@ const sites = [
 	{ url: 'https://george.mand.is', title: 'georgemandis', author: 'George Mandis' },
 	{ url: 'https://clarity.flowers', title: 'Clarity Flowers', author: 'Clarity Flowers' },
 	{ url: 'https://pseuyi.dev', title: 'pseuyi', author: 'Freda Suyi Ding' },
-	{ url: 'https://www.stevegattuso.me', title: 'stevegattuso.me', author: 'Steve Gattuso' }
+	{ url: 'https://www.stevegattuso.me', title: 'stevegattuso.me', author: 'Steve Gattuso' },
+	{ url: 'https://clemhepburn.github.io', title: 'clem hepburn', author: 'Clem Hepburn' }
 ]
 
 export default sites
