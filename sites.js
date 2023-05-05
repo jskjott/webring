@@ -27,7 +27,8 @@ const sites = [
 	{ url: 'https://pseuyi.dev', title: 'pseuyi', author: 'Freda Suyi Ding' },
 	{ url: 'https://www.stevegattuso.me', title: 'stevegattuso.me', author: 'Steve Gattuso' },
 	{ url: 'https://clemhepburn.github.io', title: 'clem hepburn', author: 'Clem Hepburn' },
-	{ url: 'https://aaronstrick.com', title: 'aaronstrick.com', author: 'Aaron Strick' }
+	{ url: 'https://aaronstrick.com', title: 'aaronstrick.com', author: 'Aaron Strick' },
+	{ url: 'https://www.mayer.cool/', title: 'mayer.cool', author: 'Dan Mayer' }
 ]
 
 export default sites
