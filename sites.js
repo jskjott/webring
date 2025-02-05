@@ -30,7 +30,8 @@ const sites = [
 	{ url: 'https://aaronstrick.com', title: 'aaronstrick.com', author: 'Aaron Strick' },
 	{ url: 'https://www.mayer.cool/', title: 'mayer.cool', author: 'Dan Mayer' },
 	{ url: 'https://k-monk.org', title: 'River Dillon', author: 'River Dillon' },
-  { url: 'https://www.saleh.sh/', title: 'saleh.sh', author: 'Saleh Alghusson' }
+  { url: 'https://www.saleh.sh/', title: 'saleh.sh', author: 'Saleh Alghusson' },
+	{ url: 'https://palomakop.tv', title: 'palomakop.tv', author: 'Paloma Kop' }
 ]
 
 export default sites
